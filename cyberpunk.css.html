@@ -1,0 +1,63 @@
+
+<head>
+  <link rel="stylesheet" href="https://gnjo.github.io/CyPk/cyberpunk.css?v=2&g=0"/>
+  <style>
+  /*frame*/
+/*template zone*/
+body.cyberpunk{
+ margin-top:4rem;
+ margin-bottom:4rem;
+ margin-right:2+25rem;
+ margin-left:auto;
+ width:43rem;
+ direction:rtl;
+}
+body.cyberpunk *{direction:ltr}
+nav,header,footer{
+ position:fixed;
+ top:0;
+ right:0;
+ width:25rem; 
+ padding-left:2rem; 
+}
+nav{
+ padding-top:4rem;
+ padding-bottom:4rem;
+ height:100vh;
+ //z-index:1;
+ overflow-y:auto; 
+}
+header,footer{
+ height:4rem;
+ z-index:2;
+ overflow:hidden;  
+}
+footer{
+ top:unset;
+ bottom:0;
+}
+.wrap{
+ /*imitation*/
+}
+/*customize the under*/
+.pink{background-color:pink}
+.blue{background-color:blue}
+.orange{background-color:orange}
+.brown{background-color:brown}
+.test2{height:400vh;}  
+  </style>
+</head>
+<body class="cyberpunk">
+  <article class="test2 pink">
+    <div class="wrap">bbbb</div>
+  </article>
+  <header class="split orange">
+    <div class="wrap">aaaaa</div>
+  </header>
+  <nav class="split brown"> 
+    <div class="wrap test2">ccc</div>
+  </nav>
+  <footer class="split blue"> 
+    <div class="wrap">dddd</div>
+  </footer>
+</body>
