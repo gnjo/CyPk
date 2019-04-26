@@ -34,8 +34,7 @@ https://gnjo.github.io/loader.js?v=1&g=0
 
 ### loader.js
 ファイルの一覧を列挙して、スクリプトとスタイルシートを完全に記述順で読み込む。内部的にはonloadをpromise化している。
-___chunk:true___ でファイルの末尾に適当な文字列を添付しキャッシュを無効化する。
-
+```chunk:true``` でファイルの末尾に適当な文字列を添付しキャッシュを無効化する。documentの生成もjsに巻けば、html部にはローダーの記述だけで済む。
 ```
 <!--html usage-->
 
