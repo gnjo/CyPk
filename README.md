@@ -34,7 +34,7 @@ https://gnjo.github.io/loader.js?v=1&g=0
 
 ### loader.js
 ファイルの一覧を列挙して、スクリプトとスタイルシートを完全に記述順で読み込む。内部的にはonloadをpromise化している。
-```chunk:true``` でファイルの末尾に適当な文字列を添付しキャッシュを無効化する。documentの生成もjsに巻けば、html部にはローダーの記述だけで済む。
+```chunk:true``` でファイルの末尾に適当な文字列を添付しキャッシュを無効化する。documentの生成もjsに巻けば、html部にはローダーの記述だけで済む。スクリプトか、スタイルシートかの判断はファイルの拡張子で行っている為、その判断が不明な場合は特別に```css("https://...")```,```js("https://...")```を加えると判別出来る。
 ```
 <!--html usage-->
 
@@ -58,3 +58,16 @@ https://codepen.io/gnjo/pen/OGEQWy.js?CyPk=1
 <script src="https://gnjo.github.io/loader.js" onload="loader({chunk:true})"></script>
 
 ```
+一つのファイルの読み込みをレポートする為に幾つかコールバックが用意されている。
+```
+loader({
+   auto:true
+   ,target:document.querySelector('script[data-loader]')
+   ,sleep:0
+   ,chunk:true
+   ,onStart:(ret)=>{/**/}
+   ,onEnd:(ret)=>{/**/}
+   ,onLoading:(ret)=>{/**/}
+  })
+```
+任意のタイミングでローダーを起動するには、```auto:false```にして```loader(....).done()```をコールする。
