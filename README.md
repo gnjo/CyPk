@@ -10,25 +10,24 @@ use.jsは常に最新を使うが、稼動済みのuse.jsはここに退避す�
 - G2：複数のファイルの複雑な依存がある。
 - 数字が若い程、スタンドアローンである。
 
-
- ＊コア関数群とは、この場合use.jsを指す。
+ ＊コア関数群とは、この場合use.jsを指す。また、cssとの依存もカウントする。あるjsがcssを必要とするのであればG1以上である。
 ### ファイル
 ```
-https://codepen.io/gnjo/pen/MRXOEx.css?cyberpunk=4
-https://gnjo.github.io/spinner.js?v=2
-https://codepen.io/gnjo/pen/OGEQWy.css?CyPk=1
+https://codepen.io/gnjo/pen/MRXOEx.css?cyberpunk=4&g=0
+https://gnjo.github.io/spinner.js?v=2&g=0
+https://codepen.io/gnjo/pen/OGEQWy.css?CyPk=1&g=2
  
-https://gnjo.github.io/e3.js?v=2
-https://gnjo.github.io/use.js?v=3
-https://gnjo.github.io/togist.js?v=1
-https://gnjo.github.io/keyCmd.js
-https://gnjo.github.io/mo.js
-https://codepen.io/gnjo/pen/mgpPEB.js?plainList=8
-https://gnjo.github.io/filter.js?v=2
-https://gnjo.github.io/imgc.js
-https://gnjo.github.io/imageReader.js
-https://codepen.io/gnjo/pen/JVadma.js?doropandpop=3
-https://codepen.io/gnjo/pen/OGEQWy.js?CyPk=1
+https://gnjo.github.io/e3.js?v=2&g=0
+https://gnjo.github.io/use.js?v=3&g=0
+https://gnjo.github.io/togist.js?v=1?&g=0
+https://gnjo.github.io/keyCmd.js?v=0&g=0
+https://gnjo.github.io/mo.js?v=0&g=2
+https://codepen.io/gnjo/pen/mgpPEB.js?plainList=8&g=2
+https://gnjo.github.io/filter.js?v=2&g=0
+https://gnjo.github.io/imgc.js?v=1&g=2
+https://gnjo.github.io/imageReader.js?v=1&g=0
+https://codepen.io/gnjo/pen/JVadma.js?doropandpop=3&g=2
+https://codepen.io/gnjo/pen/OGEQWy.js?CyPk=1&g=2
 
-https://gnjo.github.io/loader.js
+https://gnjo.github.io/loader.js?v=1&g=0
 ```
