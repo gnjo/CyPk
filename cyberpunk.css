@@ -1,0 +1,147 @@
+/*
+$sys:#2cc
+$word1:#fff
+$word2:#79a
+$mark:#f26
+$boder:2px solid $sys
+$tinborder:1px solid $word2
+$size:12px
+$subsize:10px
+$bigsize:14px
+//filter: saturate(50%)brightness(30%);
+*/
+@import url("https://fonts.googleapis.com/css?family=Share+Tech+Mono");
+* {
+  color: white;
+  box-sizing: border-box;
+  font-family: 'share tech mono',sans-serif;
+  outline: none;
+  /*background-color:inherit;*/
+  object-fit: cover;
+  text-decoration: none;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.wordh, h1 {
+  font-size: 16px;
+  color: white;
+  font-weight: normal;
+}
+
+.word1, div {
+  font-size: 14px;
+  color: white;
+}
+
+.word2 {
+  font-size: 12px;
+  color: #79a;
+}
+
+/*.sys,a{font-size:12px;color:#2cc}*/
+.sys, a {
+  font-size: 14px;
+  color: white;
+}
+
+.mark, mark {
+  font-size: inherit;
+  color: #f26;
+}
+
+.sq {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 2px;
+  background-color: #2cc;
+}
+
+.sq:after {
+  content: ' ';
+}
+
+.sq:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+/*a:hover,.link:hover{color:white;cursor:pointer;}*/
+a:hover, .link:hover {
+  color: #2cc;
+  cursor: pointer;
+}
+
+.bar, hr {
+  margin: 0;
+  padding: 0;
+  border: 0px solid;
+  border-bottom: 2px solid #2cc;
+}
+
+.split {
+  border-left: 2px solid #2cc;
+}
+
+[placeholder] {
+  border: 0px solid;
+  border-bottom: 2px solid #2cc;
+  background-color: inherit;
+}
+
+[contenteditable] {
+  min-height: 4rem;
+}
+
+/***/
+.cyber {
+  filter: sepia(70%) hue-rotate(150deg);
+}
+
+/**/
+::-webkit-scrollbar {
+  overflow: hidden;
+  width: 4px;
+  background: black;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 4px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-piece {
+  background: rgba(100, 100, 100, 0.3);
+}
+
+::-webkit-scrollbar-piece:start {
+  background: rgba(100, 100, 100, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #79a5;
+  /*#2cc5;*/
+}
+
+::-webkit-scrollbar-corner {
+  background: rgba(100, 100, 100, 0.3);
+}
+
+::selection {
+  background: #2cc;
+  color: white;
+}
