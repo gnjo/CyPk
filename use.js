@@ -1,4 +1,3 @@
-//backup 20190425
 /* script onload="use(this)" src="//gnjo.github.io/use.js?q=monocc.css"> */
 /*history
 v0 start
