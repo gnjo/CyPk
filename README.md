@@ -72,3 +72,18 @@ loader({
   })
 ```
 任意のタイミングでローダーを起動するには、```auto:false```にして```loader(....).done()```をコールする。
+
+### 二重ロードの阻止。
+複数のファイルが有る為、呼び出しが錯綜しがちである。その為に二重ロードの阻止をファイルに仕込む。
+具体的には```document.body.dataset.XXX```にフラグを建てる。
+```js
+;(function(root){
+if(document.body.dataset.moduleX) return console.log('double load block',moduleX)
+document.body.dataset.moduleX=true
+;
+
+...
+
+})(this);
+```
+
