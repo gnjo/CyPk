@@ -14,21 +14,21 @@ use.jsは常に最新を使うが、稼動済みのuse.jsはここに退避す�
  ＊コア関数群とは、この場合use.jsを指す。また、cssとの依存もカウントする。あるjsがcssを必要とするのであればG1以上である。
 ### ファイル
 ```
-https://codepen.io/gnjo/pen/MRXOEx.css?cyberpunk=4&g=0
-https://gnjo.github.io/spinner.js?v=2&g=0
-https://codepen.io/gnjo/pen/OGEQWy.css?CyPk=1&g=2
+https://gnjo.github.io/CyPk/cyberpunk.css?v=1&g=0
+https://gnjo.github.io/spinner.js?v=2
+https://codepen.io/gnjo/pen/OGEQWy.css?CyPk=1
  
-https://gnjo.github.io/e3.js?v=2&g=0
-https://gnjo.github.io/use.js?v=3&g=0
-https://gnjo.github.io/togist.js?v=1?&g=0
-https://gnjo.github.io/keyCmd.js?v=0&g=0
-https://gnjo.github.io/mo.js?v=0&g=2
-https://codepen.io/gnjo/pen/mgpPEB.js?plainList=8&g=2
-https://gnjo.github.io/filter.js?v=2&g=0
-https://gnjo.github.io/imgc.js?v=1&g=2
-https://gnjo.github.io/imageReader.js?v=1&g=0
-https://codepen.io/gnjo/pen/JVadma.js?doropandpop=3&g=2
-https://codepen.io/gnjo/pen/OGEQWy.js?CyPk=1&g=2
+https://gnjo.github.io/e.js?v=1
+https://gnjo.github.io/use.js?v=3
+https://gnjo.github.io/togist.js?v=1
+https://gnjo.github.io/keyCmd.js
+https://gnjo.github.io/mo.js
+https://gnjo.github.io/CyPk/plainList.js?v=8
+https://gnjo.github.io/filter.js?v=2
+https://gnjo.github.io/imgc.js
+https://gnjo.github.io/imageReader.js
+https://codepen.io/gnjo/pen/JVadma.js?doropandpop=3
+https://codepen.io/gnjo/pen/OGEQWy.js?CyPk=1
 
 https://gnjo.github.io/loader.js?v=1&g=0
 ```
@@ -40,16 +40,16 @@ https://gnjo.github.io/loader.js?v=1&g=0
 <!--html usage-->
 
 <script type="text/plain" data-loader>
-https://codepen.io/gnjo/pen/MRXOEx.css?cyberpunk=4
+https://gnjo.github.io/CyPk/cyberpunk.css?v=1&g=0
 https://gnjo.github.io/spinner.js?v=2
 https://codepen.io/gnjo/pen/OGEQWy.css?CyPk=1
  
-https://gnjo.github.io/e3.js?v=2
+https://gnjo.github.io/e.js?v=1
 https://gnjo.github.io/use.js?v=3
 https://gnjo.github.io/togist.js?v=1
 https://gnjo.github.io/keyCmd.js
 https://gnjo.github.io/mo.js
-https://codepen.io/gnjo/pen/mgpPEB.js?plainList=8
+https://gnjo.github.io/CyPk/plainList.js?v=8
 https://gnjo.github.io/filter.js?v=2
 https://gnjo.github.io/imgc.js
 https://gnjo.github.io/imageReader.js
@@ -66,12 +66,9 @@ loader({
    ,target:document.querySelector('script[data-loader]')
    ,sleep:0
    ,chunk:true
-   ,text:false
    ,onStart:(ret)=>{/**/}
    ,onEnd:(ret)=>{/**/}
    ,onLoading:(ret)=>{/**/}
   })
 ```
 任意のタイミングでローダーを起動するには、```auto:false```にして```loader(....).done()```をコールする。
-
-また、スクリプトやスタイルシートではなく、文書を一括して読み込む場合は```text:true```とする。この場合、```fetch(...).then(d=>text())```を使った結果がコールバックに帰ってくる。読み込む順序は同じく、記述順である。
