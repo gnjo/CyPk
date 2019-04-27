@@ -1,5 +1,8 @@
 # CyPk
 cyberpunk.cssはここで管理する。最重要のテーマで、肥大化しない様に心がける。
+バージョンはイコール修正数である。0.32なら三十二項目修正済み。である。
+- v0.32 三千行の実用に耐えられると判断。
+- v0.69 主にファイルの整理、DOM更新の高速化。htmlへの依存解消。フレームのダイナミックな変化の修正を持ってバージョン付与。
 
 ### 基本方針。
 use.jsは常に最新を使うが、稼動済みのuse.jsはここに退避する。
@@ -15,22 +18,20 @@ use.jsは常に最新を使うが、稼動済みのuse.jsはここに退避す�
 ### ファイル
 ```
 https://gnjo.github.io/CyPk/cyberpunk.css?v=1&g=0
-https://gnjo.github.io/spinner.js?v=2
+https://gnjo.github.io/CyPk/spinner.js?v=2
 https://codepen.io/gnjo/pen/OGEQWy.css?CyPk=1
  
-https://gnjo.github.io/e.js?v=1
+https://gnjo.github.io/CyPk/e.js?v=1
 https://gnjo.github.io/use.js?v=3
-https://gnjo.github.io/togist.js?v=1
-https://gnjo.github.io/keyCmd.js
-https://gnjo.github.io/mo.js
+https://gnjo.github.io/CyPk/togist.js?v=1
+https://gnjo.github.io/CyPk/keyCmd.js
+https://gnjo.github.io/CyPk/mo.js
 https://gnjo.github.io/CyPk/plainList.js?v=8
-https://gnjo.github.io/filter.js?v=2
-https://gnjo.github.io/imgc.js
-https://gnjo.github.io/imageReader.js
-https://codepen.io/gnjo/pen/JVadma.js?doropandpop=3
+https://gnjo.github.io/CyPk/filter.js?v=2
+https://gnjo.github.io/CyPk/imgc.js
+https://gnjo.github.io/CyPk/imageReader.js
+https://gnjo.github.io/CyPk/dropandpop.js?v=1
 https://codepen.io/gnjo/pen/OGEQWy.js?CyPk=1
-
-https://gnjo.github.io/loader.js?v=1&g=0
 ```
 
 ### loader.js
