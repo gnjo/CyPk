@@ -78,8 +78,8 @@ loader({
 具体的には```document.body.dataset.XXX```にフラグを建てる。
 ```js
 ;(function(root){
-if(document.body.dataset.moduleX) return console.log('double load block',moduleX)
-document.body.dataset.moduleX=true
+ if(document.body.dataset.moduleX) return console.log('double moduleX');
+ document.body.dataset.moduleX=true
 ;
 
 ...
