@@ -88,3 +88,21 @@ loader({
 })(this);
 ```
 
+### データセットの有効活用
+データセットは、セットアトリビュートを使わず直接アクセス出来る為便利である。アプリケーションのデータ保存先として扱える。
+これはインプットヒドゥン要素と同じ感覚であるが、勝手に送信されない分、使い勝手は良い。データセットの変更はobserverで監視する。フロント側も値の変更をスタイルシートの変更で対応できる。``[data-xxxx*='xxxx']{...}```
+```html
+<output id="config" style="display:none"></output>
+```
+```js
+let config=fn.q('#config')
+config.dataset.xxxx='xxxx'
+```
+```js
+//アプリケーションデータ群をデータセットに統合すれば、シリアライズも簡単である。
+let data=JSON.stringify(config.dataset)
+Object.assing(config.dataset,data)
+```
+
+
+
