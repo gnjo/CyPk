@@ -42,20 +42,10 @@ https://codepen.io/gnjo/pen/OGEQWy.js?CyPk=1
 
 <script type="text/plain" data-loader>
 https://gnjo.github.io/CyPk/cyberpunk.css?v=1&g=0
-https://gnjo.github.io/spinner.js?v=2
-https://codepen.io/gnjo/pen/OGEQWy.css?CyPk=1
  
-https://gnjo.github.io/e.js?v=1
+js(https://gnjo.github.io/e.js?v=1)
 https://gnjo.github.io/use.js?v=3
-https://gnjo.github.io/togist.js?v=1
 https://gnjo.github.io/keyCmd.js
-https://gnjo.github.io/mo.js
-https://gnjo.github.io/CyPk/plainList.js?v=8
-https://gnjo.github.io/filter.js?v=2
-https://gnjo.github.io/imgc.js
-https://gnjo.github.io/imageReader.js
-https://codepen.io/gnjo/pen/JVadma.js?doropandpop=3
-https://codepen.io/gnjo/pen/OGEQWy.js?CyPk=1
 </script>
 <script src="https://gnjo.github.io/loader.js" onload="loader({chunk:true})"></script>
 
