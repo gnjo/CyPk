@@ -1,5 +1,8 @@
 //https://codepen.io/gnjo/pen/JVadma.js?doropandpop=3
-
+/*history
+ v1.0 writed
+ v1.0 document.body=>document.documentElement
+*/
 ;(function(root){ 
  var imageReader=root.imageReader||{}
  ,imgc=root.imgc
@@ -10,7 +13,7 @@
  //dropsetting
  if(document.body.dataset[sign]) return console.log('double load block',sign)
  ;
- imageReader(document.body,(d,file)=>{
+ imageReader(/*document.body*/document.documentElement,(d,file)=>{
   let style=`
 position: fixed;
 width: 200px;
