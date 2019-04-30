@@ -1,4 +1,8 @@
 //https://codepen.io/gnjo/pen/mgpPEB.js?plainList=8
+/*history
+v0.1 lunched
+v1 bugfix new root
+*/
 ;(function(root){
  `use strict`;
  var fn=root.fn||{}
@@ -64,6 +68,7 @@ ${title}</li>
    let b=await togist(str,a.id,'note.txt',nos)
    let c=await togistsearch(a.id)
    let el=fn.i3(lay(c))
+   ;el.onclick=caller//bug fix
    el.a2(board)
    ;a=b=c=void 0;
   }
