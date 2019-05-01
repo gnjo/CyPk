@@ -5,7 +5,8 @@
   <div class="ret"></div>
   <script>
 
-let w =new Worker('wordnetWorker.js')
+let cnk=fn.rkana()    
+let w =new Worker('wordnetWorker.js'+'?vvvv='+cnk)
 ,wn=fn.q('.wn')
 ,ret=fn.q('.ret')
 ,c=()=>{console.log('hit');w.postMessage(fn.gsl())}
