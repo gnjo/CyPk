@@ -41,7 +41,7 @@ var fn=root.fn||{}
 ,togist=root.togist
 ;
 function framectrl(e){
- if(!e.target.nodeName.toLowerCase()==='a') return;
+ if(!(e.target.nodeName.toLowerCase()==='a')) return;
  let cmd=e.target.textContent
  ;
  if(cmdMap[cmd]) cmdMap[cmd].call(this,e) 
