@@ -1,0 +1,18 @@
+<body>
+  <script src="//gnjo.github.io/use.js"></script>
+  <script src="//gnjo.github.io/keyCmd.js"></script>
+  <div class="wn">アイウエを。カキクケコ。さし。情報。</div>
+  <div class="ret"></div>
+  <script>
+
+let w =new Worker('wordnetWorker.js')
+,wn=fn.q('.wn')
+,ret=fn.q('.ret')
+,c=()=>{w.postMessage(fn.gsl())}
+w.onMessage=(e)=>{ ret.textContent=e.data.join('/') }
+keyCmd(document.body)
+ .ctrl({/*space*/32:c})
+ .end('start')
+  
+  </script>
+</body>
