@@ -1,0 +1,226 @@
+/*history
+v0.69 output github
+*/
+body, .flex {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.l {
+  flex-grow: 1;
+  overflow-y: scroll;
+  direction: rtl;
+}
+
+.r {
+  width: 25rem;
+  /*30rem;*/
+  overflow-y: scroll;
+}
+
+.wrap {
+  direction: ltr;
+}
+
+/***/
+.frame {
+  min-width: 54rem;
+  width: 54rem;
+  max-width: 54rem;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.frame .info {
+  width: 11rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame .main {
+  width: 43rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame [data-type] {
+  flex-grow: 1;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.frame {
+  min-height: 10rem;
+  /**/
+}
+
+.l .wrap {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 2rem;
+  float: right;
+}
+
+.frame {
+  margin-bottom: 4rem;
+}
+
+.frame h1 {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.frame h1:after {
+  content: attr(data-num) "";
+}
+
+.frame .info [data-type] {
+  margin: 0 1rem;
+}
+
+.frame .info img {
+  /*width:100%;*/
+  height: 17rem;
+}
+
+.frame .main [data-type] {
+  margin-left: 1rem;
+}
+
+.frame {
+  /*debug*/
+}
+
+.frame::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: attr(data-stat) "[" attr(data-line) "/34]";
+  color: #2cc;
+  pointer-events: none;
+}
+
+.ctrl {
+  position: absolute;
+  bottom: -1rem;
+  right: 0;
+}
+
+/*
+.titlelist:after{
+ content:attr(data-num)'['attr(data-line)'/34] 'attr(data-title)
+}
+*/
+.titlelist:after {
+  /*    content: attr(data-num) "[" attr(data-line) "/34] " attr(data-title);*/
+  content: attr(data-num) "" attr(data-title);
+}
+
+.modal {
+  border-left: 2px solid #2cc;
+  overflow-y: scroll;
+}
+
+.modal ol > li:after {
+  content: attr(line) " " attr(updated);
+}
+
+.modal ol {
+  padding-left: 2rem;
+}
+
+.modal ol > li:hover {
+  color: #2cc;
+}
+
+.modal ol > li {
+  font-size: 14px;
+  /* color: #2cc; */
+}
+
+.modal ol {
+  padding-left: 2rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.r .wrap div:last-child {
+  margin-bottom: 4rem;
+}
+
+.r .wrap > div {
+  margin-left: 2rem;
+  margin-right: 1rem;
+  /*add*/
+}
+
+.r .wrap div:first-child {
+  margin-top: 4rem;
+}
+
+.stt {
+  /* background-color: orange; */
+  width: 8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 1rem;
+}
+
+.frame[data-stat*="coding"]:after
+, .titlelist[data-stat*="coding"]:after {
+  color: #f26;
+}
+
+.titlelist:hover:after {
+  color: #2cc !important;
+}
+
+#total.total {
+  position: fixed;
+  top: 15px;
+  left: calc(100% - 22.9rem);
+  top: 0;
+}
+
+.l .frame:last-child {
+  margin-bottom: 80vh;
+}
+
+.frame .cyber {
+  filter: unset !important;
+}
+
+/*.mini*/
+.l .mini [data-type="note"] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 41rem;
+  /* margin-left: 1rem; */
+}
+
+.l .mini h1 {
+  display: none;
+}
+
+.l .mini .main {
+  display: none;
+}
+
+.l .mini .frame .info img {
+  height: 8rem;
+}
+
+.l .mini .frame::after {
+  content: attr(data-num) "|" attr(data-title) "|" attr(data-stat) "[" attr(data-line) "/34]";
+  width: 20rem;
+}
