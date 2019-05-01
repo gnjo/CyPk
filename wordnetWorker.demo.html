@@ -10,7 +10,7 @@ let w =new Worker('wordnetWorker.js'+'?vvvv='+cnk)
 ,wn=fn.q('.wn')
 ,ret=fn.q('.ret')
 ,c=()=>{console.log('hit');w.postMessage(fn.gsl())}
-w.onmessage=(e)=>{console.log('onMessage'); ret.textContent=e.data.join('/') }
+w.onmessage=(e)=>{console.log('onmessage'); ret.textContent=e.data.map(d=>d[2]).join('/') }
 keyCmd(document.body)
  .ctrl({/*space*/32:c})
  .end('start')
