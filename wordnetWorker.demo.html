@@ -1,16 +1,24 @@
 <body>
   <script src="//gnjo.github.io/use.js"></script>
   <script src="//gnjo.github.io/keyCmd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/2.2.0/draggabilly.pkgd.min.js"></script>
+  <script src="https://codepen.io/gnjo/pen/LvKEYx.js?wi=1"></script>  
+  
   <div class="wn">アイウエを。カキクケコ。さし。情報。</div>
-  <div class="ret"></div>
+  <div class="ret">open</div>
   <script>
 
 let cnk=fn.rkana()    
 let w =new Worker('wordnetWorker.js'+'?vvvv='+cnk)
 ,wn=fn.q('.wn')
 ,ret=fn.q('.ret')
-,c=()=>{console.log('hit');w.postMessage(fn.gsl())}
-w.onmessage=(e)=>{console.log('onmessage'); ret.textContent=e.data.map(d=>d[2]).join('/') }
+,c=()=>{w.postMessage(fn.gsl())}
+,x=wi()
+document.body.appendChild(x.el)
+/*w.onmessage=(e)=>{console.log('onmessage'); ret.textContent=e.data.map(d=>d[2]).join('/') }*/
+w.onmessage=(e)=>{x.set( e.data.map(d=>d[2]).join('/') )}
+ret.onclick=()=>x.open()
+
 keyCmd(document.body)
  .ctrl({/*space*/32:c})
  .end('start')
